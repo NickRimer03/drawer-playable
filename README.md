@@ -17,6 +17,8 @@ Simply run `build/index.html`
 
 ### Play
 
+This playable is a variation of the playable from [another repository](https://github.com/NickRimer03/rope-connect-playable).
+
 Use your mouse (on desktop) or finger (on mobile) to draw a line to follow the cursor.
 
 Connect a line of three identical chips. You can draw a line in any shape you like.
