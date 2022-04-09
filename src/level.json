@@ -1,0 +1,429 @@
+[
+  {
+    "type": "container",
+    "key": "backLayer",
+    "name": "Back Layer",
+    "target": "world",
+    "children": [
+      {
+        "type": "background",
+        "sprite": "background_preload"
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "key": "uiLayer",
+    "name": "UI Layer",
+    "target": "stage",
+    "children": [
+      {
+        "type": "sprite",
+        "key": "logo",
+        "sprite": "logo",
+        "anchor": [0.5, 0],
+        "data": {
+          "dimensions": {
+            "w": 310,
+            "h": 171
+          },
+          "offset": {
+            "landscape": {
+              "center-x": -287.5,
+              "center-y": -268
+            },
+            "portrait": {
+              "left": "center",
+              "top": 50
+            }
+          }
+        }
+      },
+      {
+        "type": "container",
+        "key": "scroll",
+        "data": {
+          "dimensions": {
+            "w": 504,
+            "h": 133,
+            "factor": 1.175
+          },
+          "offset": {
+            "landscape": {
+              "center-x": -287.5,
+              "center-y": -33.5
+            },
+            "portrait": {
+              "left": "center",
+              "top": 317
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "sprite",
+            "atlas": "main",
+            "frame": "scroll.png",
+            "anchor": 0.5
+          },
+          {
+            "type": "text",
+            "constant": "connect",
+            "anchor": [0.5, 0.55],
+            "style": {
+              "font": "PT Serif Bold",
+              "fontSize": 34,
+              "fill": "#540000",
+              "align": "center"
+            }
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "key": "cta",
+        "data": {
+          "dimensions": {
+            "w": 481,
+            "h": 129.4
+          },
+          "offset": {
+            "landscape": {
+              "center-x": -287.5,
+              "center-y": 180.7
+            },
+            "portrait": {
+              "left": "center",
+              "top": 1270
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "sprite",
+            "atlas": "main",
+            "frame": "cta.png",
+            "anchor": 0.5,
+            "interactive": true,
+            "events": [
+              {
+                "type": "onInputDown",
+                "name": "ctaClick"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "constant": "play",
+            "anchor": [0.5, 0.6],
+            "style": {
+              "font": "PT Serif Bold",
+              "fontSize": 48,
+              "fill": "#ffead2",
+              "stroke": "#003f00",
+              "strokeThickness": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "key": "readyGo",
+        "data": {
+          "dimensions": {
+            "w": 190,
+            "h": 70
+          },
+          "offset": {
+            "landscape": {
+              "center-x": -382.5,
+              "center-y": 40
+            },
+            "portrait": {
+              "center-x": -95,
+              "top": 440
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "graphics",
+            "key": "readyGoBack",
+            "draw": {
+              "shape": "rect",
+              "fillAlpha": 0,
+              "w": 190,
+              "h": 70
+            }
+          },
+          {
+            "type": "text",
+            "constant": "ready",
+            "anchor": 0.5,
+            "scale": 0,
+            "position": {
+              "x": 95,
+              "y": 35
+            },
+            "style": {
+              "font": "PT Serif Bold",
+              "fontSize": 48,
+              "fill": "#ffffff"
+            }
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "key": "draw",
+        "opacity": 0,
+        "data": {
+          "dimensions": {
+            "w": 500,
+            "h": 60
+          },
+          "offset": {
+            "landscape": {
+              "center-x": -537.5,
+              "center-y": 50
+            },
+            "portrait": {
+              "center-x": -250,
+              "bottom": 260
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "graphics",
+            "key": "drawBack",
+            "draw": {
+              "shape": "rect",
+              "fillAlpha": 0,
+              "w": 500,
+              "h": 60
+            }
+          },
+          {
+            "type": "text",
+            "constant": "draw",
+            "anchor": 0.5,
+            "position": {
+              "x": 250,
+              "y": 30
+            },
+            "style": {
+              "font": "PT Serif Bold",
+              "fontSize": 42,
+              "fill": "#ffffff"
+            }
+          }
+        ]
+      },
+      {
+        "type": "container",
+        "key": "canvas",
+        "data": {
+          "dimensions": {
+            "w": 602,
+            "h": 596
+          },
+          "offset": {
+            "landscape": {
+              "left": 680,
+              "center-y": -360
+            },
+            "portrait": {
+              "center-x": -333,
+              "top": 542
+            }
+          }
+        },
+        "children": [
+          {
+            "type": "sprite",
+            "key": "cactus",
+            "atlas": "main",
+            "frame": "cactus.png"
+          },
+          {
+            "type": "loop",
+            "from": 1,
+            "to": 18,
+            "object": {
+              "type": "container",
+              "key": "chip%N",
+              "position": {
+                "x": [161, 277, 509, 277, 393, 161, 509, 277, 277, 393, 509, 277, 393, 509, 393, 161, 161, 393],
+                "y": [110, 176, 237, 64, 64, 237, 110, 288, 400, 288, 491, 512, 176, 364, 400, 364, 491, 512]
+              },
+              "children": [
+                {
+                  "type": "sprite",
+                  "key": "chip%N",
+                  "atlas": "main",
+                  "frame": [
+                    "item-green.png",
+                    "item-green.png",
+                    "item-green.png",
+                    "item-yellow.png",
+                    "item-yellow.png",
+                    "item-yellow.png",
+                    "item-hat.png",
+                    "item-hat.png",
+                    "item-hat.png",
+                    "item-blue.png",
+                    "item-blue.png",
+                    "item-blue.png",
+                    "item-purse.png",
+                    "item-purse.png",
+                    "item-purse.png",
+                    "item-violet.png",
+                    "item-violet.png",
+                    "item-violet.png"
+                  ],
+                  "anchor": 0.5,
+                  "scale": 0.9,
+                  "data": [
+                    {"hover": "chipGlow1"},
+                    {"hover": "chipGlow2"},
+                    {"hover": "chipGlow3"},
+                    {"hover": "chipGlow4"},
+                    {"hover": "chipGlow5"},
+                    {"hover": "chipGlow6"},
+                    {"hover": "chipGlow7"},
+                    {"hover": "chipGlow8"},
+                    {"hover": "chipGlow9"},
+                    {"hover": "chipGlow10"},
+                    {"hover": "chipGlow11"},
+                    {"hover": "chipGlow12"},
+                    {"hover": "chipGlow13"},
+                    {"hover": "chipGlow14"},
+                    {"hover": "chipGlow15"},
+                    {"hover": "chipGlow16"},
+                    {"hover": "chipGlow17"},
+                    {"hover": "chipGlow18"}
+                  ]
+                },
+                {
+                  "type": "sprite",
+                  "key": "chipGlow%N",
+                  "atlas": "main",
+                  "frame": [
+                    "green-glow.png",
+                    "green-glow.png",
+                    "green-glow.png",
+                    "yellow-glow.png",
+                    "yellow-glow.png",
+                    "yellow-glow.png",
+                    "hat-glow.png",
+                    "hat-glow.png",
+                    "hat-glow.png",
+                    "blue-glow.png",
+                    "blue-glow.png",
+                    "blue-glow.png",
+                    "purse-glow.png",
+                    "purse-glow.png",
+                    "purse-glow.png",
+                    "violet-glow.png",
+                    "violet-glow.png",
+                    "violet-glow.png"
+                  ],
+                  "anchor": 0.5,
+                  "scale": 0.9,
+                  "opacity": 0
+                }
+              ]
+            }
+          },
+          {
+            "type": "graphics",
+            "key": "canvasBack",
+            "data": {
+              "w": 508,
+              "h": 550
+            },
+            "position": {
+              "x": 79,
+              "y": 15
+            },
+            "draw": {
+              "shape": "rect",
+              "w": 508,
+              "h": 550
+            }
+          }
+        ]
+      },
+      {
+        "type": "graphics",
+        "key": "wall",
+        "data": {
+          "dimensions": {
+            "w": 1366,
+            "h": 1366
+          },
+          "offset": {
+            "landscape": {
+              "left": 0,
+              "top": 0
+            },
+            "portrait": {
+              "left": 0,
+              "top": 0
+            }
+          }
+        },
+        "opacity": 0,
+        "draw": {
+          "shape": "rect",
+          "fill": "0xff0000",
+          "fillAlpha": 0.4,
+          "w": 1366,
+          "h": 1366
+        }
+      },
+      {
+        "type": "sprite",
+        "key": "hand",
+        "atlas": "main",
+        "frame": "hand.png",
+        "opacity": 0,
+        "data": {
+          "dimensions": {
+            "w": 122,
+            "h": 181
+          },
+          "offset": {
+            "landscape": {
+              "left": 0,
+              "top": 0
+            },
+            "portrait": {
+              "left": 0,
+              "top": 0
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "key": "gameLayer",
+    "name": "Game Layer",
+    "target": "world",
+    "children": []
+  },
+  {
+    "type": "camera",
+    "portrait": {
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    "landscape": {
+      "offsetX": 0,
+      "offsetY": 0
+    }
+  }
+]

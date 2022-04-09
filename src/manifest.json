@@ -1,0 +1,30 @@
+{
+  "name": "JoWW",
+  "short_name": "JOW",
+  "concept_name": "ST0068v004",
+
+  "platforms": {
+    "Facebook": null
+  },
+
+  "sprites": {
+    "ST0068v004": [
+      "sprite/ST0068v004/ui/hand.png",
+      "sprite/ST0068v004/ui/cta.png",
+      "sprite/ST0068v004/ui/scroll.png",
+      "sprite/ST0068v004/ui/cactus.png",
+      "sprite/ST0068v004/chips/item-blue.png",
+      "sprite/ST0068v004/chips/item-green.png",
+      "sprite/ST0068v004/chips/item-hat.png",
+      "sprite/ST0068v004/chips/item-purse.png",
+      "sprite/ST0068v004/chips/item-violet.png",
+      "sprite/ST0068v004/chips/item-yellow.png",
+      "sprite/ST0068v004/chips/glow/blue-glow.png",
+      "sprite/ST0068v004/chips/glow/green-glow.png",
+      "sprite/ST0068v004/chips/glow/hat-glow.png",
+      "sprite/ST0068v004/chips/glow/purse-glow.png",
+      "sprite/ST0068v004/chips/glow/violet-glow.png",
+      "sprite/ST0068v004/chips/glow/yellow-glow.png"
+    ]
+  }
+}
